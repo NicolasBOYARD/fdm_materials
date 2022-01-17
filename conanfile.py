@@ -6,7 +6,7 @@ required_conan_version = ">=1.42"
 
 class FDM_MaterialsConan(ConanFile):
     name = "fdm_materials"
-    version = "4.13.0-alpha+001"
+    version = "5.0.0"
     license = "LGPL-3.0"
     author = "Ultimaker B.V."
     url = "https://github.com/Ultimaker/fdm_materials"
@@ -18,6 +18,8 @@ class FDM_MaterialsConan(ConanFile):
     default_user = "ultimaker"
     default_channel = "testing"
     exports = "LICENSE*"
+    python_requires = "UltimakerBase/0.1@ultimaker/testing"
+    python_requires_extend = "UltimakerBase.UltimakerBase"
     scm = {
         "type": "git",
         "subfolder": ".",
